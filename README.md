@@ -1,45 +1,13 @@
-# TP integrador — AyED C2 2026
+# Datasets
 
-Repositorio del grupo. Partir de este esqueleto. No borrar la estructura de `src/` ni de `docs/`.
+Elegí **un** tema. Los archivos `.txt` de los otros dos temas se pueden dejar en la carpeta; no hace falta borrarlos.
 
-## Integrantes
+Archivos de **texto simple**: codificación UTF-8, **un registro por línea**, campos separados por coma, la primera línea es el encabezado con los nombres de los campos.
 
-| Nombre | Mail | GitHub |
+| Tema | Archivos | Relación recursiva |
 | --- | --- | --- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Pokédex | `pokedex.txt`, `evoluciones.txt` | `origen_id` → `destino_id` (una fila por evolución; Eevee tiene varias) |
+| Recetario | `recetas.txt`, `ingredientes.txt`, `subrecetas.txt` | `receta_id` usa `subreceta_id` |
+| Biblioteca musical | `canciones.txt`, `versiones.txt` | `cancion_id` es versión de `version_de_id` (`cover`, `live`, `remix`) |
 
-**Tema elegido:** Pokédex / Recetario / Biblioteca musical (dejar uno)
-
-## Cómo ejecutar
-
-Desde la raíz del repo, con Python 3.10 o superior:
-
-```text
-python -m src.main
-```
-
-En Windows, si `python` no anda: `py -3 -m src.main`.
-
-Solo biblioteca estándar. No hay `requirements.txt` a propósito.
-
-## Entregas
-
-Cada vencimiento se marca con un tag. Ver `GIT.md`.
-
-| Tag | Vence |
-| --- | --- |
-| `preentrega` (opcional, solo repo) | domingo 30-ago-2026 23:59 |
-| `entrega-1` | domingo 06-sep-2026 23:59 |
-| `entrega-2` | domingo 20-sep-2026 23:59 |
-| `entrega-3` | domingo 04-oct-2026 23:59 |
-| `entrega-4` | domingo 01-nov-2026 23:59 |
-| `entrega-5` | domingo 15-nov-2026 23:59 |
-| `entrega-6` | domingo 22-nov-2026 23:59 |
-
-Defensa oral (reemplaza el 2do parcial): 25 y 27-nov-2026.
-
-La cátedra corrige el **tag**, no el último commit suelto de `main`.
-
-El grupo se avisa por mail a diego.ambrossio@unab.edu.ar **y** angel.bianco@unab.edu.ar. Ver `GIT.md`.
+No hardcodees las filas en el código: leé los `.txt` (recién en E5).
